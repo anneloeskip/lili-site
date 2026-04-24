@@ -9,7 +9,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "LILI — Library of Interventions on Loneliness & Isolation",
+  title: "LILI",
   description:
     "A library of intervention studies to reduce feelings of loneliness and social isolation.",
   icons: {

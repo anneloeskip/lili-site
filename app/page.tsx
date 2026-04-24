@@ -23,23 +23,18 @@ export default async function HomePage() {
         </p>
 
         {/* Stats */}
-        <div className="mt-12 flex gap-12">
-          <div className="w-28 text-center">
-            <div className="text-4xl font-bold">{studies.length}</div>
-            <div className="mt-1 text-sm text-muted-foreground">Papers</div>
-          </div>
-          <div className="w-28 text-center">
-            <div className="text-4xl font-bold">—</div>
-            <div className="mt-1 text-sm text-muted-foreground">Studies</div>
-          </div>
-          <div className="w-28 text-center">
-            <div className="text-4xl font-bold">—</div>
-            <div className="mt-1 text-sm text-muted-foreground">Effects</div>
-          </div>
-          <div className="w-28 text-center">
-            <div className="text-4xl font-bold">—</div>
-            <div className="mt-1 text-sm text-muted-foreground">Observations</div>
-          </div>
+        <div style={{display:"flex", gap:"3rem", marginTop:"3rem"}}>
+          {[
+            { value: studies.length, label: "Papers" },
+            { value: "—", label: "Studies" },
+            { value: "—", label: "Effects" },
+            { value: "—", label: "Observations" },
+          ].map(({ value, label }) => (
+            <div key={label} style={{width:"8rem", textAlign:"center"}}>
+              <div className="text-4xl font-bold">{value}</div>
+              <div className="mt-1 text-sm text-muted-foreground">{label}</div>
+            </div>
+          ))}
         </div>
       </section>
 

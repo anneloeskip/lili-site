@@ -11,7 +11,10 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "LILI — Library of Interventions on Loneliness & Isolation",
   description:
-    "An open, continuously growing database of studies testing psychological and social interventions to reduce loneliness.",
+    "A library of intervention studies to reduce feelings of loneliness and social isolation.",
+  icons: {
+    icon: "/LILI_logo.png",
+  },
 };
 
 export default function RootLayout({

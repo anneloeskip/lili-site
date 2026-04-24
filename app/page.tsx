@@ -23,22 +23,22 @@ export default async function HomePage() {
         </p>
 
         {/* Stats */}
-        <div className="mt-12 flex gap-16">
-          <div className="flex flex-col items-center">
-            <span className="text-4xl font-bold">{studies.length}</span>
-            <span className="mt-1 text-sm text-muted-foreground">Papers</span>
+        <div className="mt-12 flex gap-12">
+          <div className="w-28 text-center">
+            <div className="text-4xl font-bold">{studies.length}</div>
+            <div className="mt-1 text-sm text-muted-foreground">Papers</div>
           </div>
-          <div className="flex flex-col items-center">
-            <span className="text-4xl font-bold">—</span>
-            <span className="mt-1 text-sm text-muted-foreground">Studies</span>
+          <div className="w-28 text-center">
+            <div className="text-4xl font-bold">—</div>
+            <div className="mt-1 text-sm text-muted-foreground">Studies</div>
           </div>
-          <div className="flex flex-col items-center">
-            <span className="text-4xl font-bold">—</span>
-            <span className="mt-1 text-sm text-muted-foreground">Effects</span>
+          <div className="w-28 text-center">
+            <div className="text-4xl font-bold">—</div>
+            <div className="mt-1 text-sm text-muted-foreground">Effects</div>
           </div>
-          <div className="flex flex-col items-center">
-            <span className="text-4xl font-bold">—</span>
-            <span className="mt-1 text-sm text-muted-foreground">Observations</span>
+          <div className="w-28 text-center">
+            <div className="text-4xl font-bold">—</div>
+            <div className="mt-1 text-sm text-muted-foreground">Observations</div>
           </div>
         </div>
       </section>

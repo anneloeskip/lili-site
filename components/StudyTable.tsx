@@ -131,8 +131,8 @@ function firstAuthorEtAl(authors: string): string {
 
 function DirectionBadge({ direction }: { direction: string }) {
   const v = direction.toLowerCase();
-  if (v === "beneficial") return <Badge className="bg-green-600">beneficial</Badge>;
-  if (v === "harmful") return <Badge className="bg-red-600">harmful</Badge>;
-  if (v === "mixed") return <Badge className="bg-yellow-600">mixed</Badge>;
+  if (v === "beneficial") return <Badge className="bg-primary text-primary-foreground">beneficial</Badge>;
+  if (v === "harmful") return <Badge className="bg-destructive text-white">harmful</Badge>;
+  if (v === "mixed") return <Badge variant="secondary">mixed</Badge>;
   return <Badge variant="secondary">{direction || "null"}</Badge>;
 }

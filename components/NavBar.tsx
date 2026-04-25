@@ -37,8 +37,8 @@ export function NavBar() {
                 href={link.href}
                 className={
                   pathname === link.href
-                    ? "text-foreground font-medium text-sm"
-                    : "text-muted-foreground hover:text-foreground transition-colors text-sm"
+                    ? "text-foreground font-medium"
+                    : "text-muted-foreground hover:text-foreground transition-colors"
                 }
               >
                 {link.label}

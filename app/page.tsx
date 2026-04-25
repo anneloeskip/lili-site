@@ -7,7 +7,7 @@ export default async function HomePage() {
   return (
     <div className="mx-auto max-w-4xl px-6">
 
-      {/* ── Hero ─────────────────────────────────────────────── */}
+      {/* ── Hero ───────────────────────────────────────────────── */}
       <section className="py-24 flex flex-col items-center text-center">
         <span className="inline-flex items-center rounded-full bg-red-600 px-4 py-1.5 text-sm font-medium text-white">
           Currently in beta
@@ -21,15 +21,14 @@ export default async function HomePage() {
           A library of intervention studies to reduce feelings of loneliness and social isolation.
         </p>
 
-        {/* Stats */}
-        <div className="mt-12 flex justify-center gap-12">
+        <div className="mt-12 flex justify-center gap-16">
           {[
             { value: studies.length, label: "Papers" },
             { value: "—", label: "Studies" },
             { value: "—", label: "Effects" },
             { value: "—", label: "Observations" },
           ].map(({ value, label }) => (
-            <div key={label} className="text-center" style={{ minWidth: "6rem" }}>
+            <div key={label} className="text-center" style={{ minWidth: "7rem" }}>
               <div className="text-3xl font-bold">{value}</div>
               <div className="mt-1 text-sm text-muted-foreground">{label}</div>
             </div>
@@ -37,12 +36,12 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* ── About LILI ───────────────────────────────────────── */}
-      <section className="py-16 border-t border-border">
-        <h2 className="text-3xl font-bold tracking-tight mb-4">
+      {/* ── About LILI ─────────────────────────────────────────── */}
+      <section className="mt-8 pb-24">
+        <h2 className="text-3xl font-bold tracking-tight mb-5">
           <span className="text-primary">About </span>LILI
         </h2>
-        <p className="text-base leading-relaxed text-muted-foreground mb-6 max-w-2xl">
+        <p className="text-base leading-relaxed text-muted-foreground mb-8 max-w-2xl">
           LILI is a continuously growing collection of studies examining psychological
           and social interventions to reduce loneliness and isolation. With LILI, you
           can explore individual studies, understand the current state of research,
@@ -50,41 +49,43 @@ export default async function HomePage() {
         </p>
         <Link
           href="/about"
-          className="inline-flex items-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground hover:opacity-90 transition-opacity"
+          className="inline-flex items-center rounded-lg bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground hover:opacity-90 transition-opacity"
         >
           Learn more
         </Link>
       </section>
 
-      {/* ── Explore Studies ──────────────────────────────────── */}
-      <section className="py-16 border-t border-border text-center">
+      {/* ── Explore Studies ────────────────────────────────────── */}
+      <section className="py-24 text-center">
         <h2 className="text-3xl font-bold tracking-tight">
           <span className="text-primary">Explore </span>Studies
         </h2>
         <p className="mt-4 text-base leading-relaxed text-muted-foreground mx-auto max-w-xl">
-          Browse our database of research papers testing interventions to reduce
-          loneliness and isolation. Filter, sort, and explore study details,
-          methods, and outcomes.
+          Browse our database of research papers testing interventions to
+          reduce feelings of loneliness and social isolation. Filter, sort, and
+          explore study details, methods, and outcomes.
         </p>
 
-        {/* Study cards */}
-        <div className="mt-8 grid gap-4 text-left"
-          style={{ gridTemplateColumns: "repeat(auto-fill, minmax(260px, 1fr))" }}>
-          {studies.slice(0, 3).map((s) => (
+        <div className="mt-10 grid gap-4 text-left" style={{ gridTemplateColumns: "repeat(2, 1fr)" }}>
+          {studies.slice(0, 2).map((s) => (
             <div
               key={s.id}
               style={{
                 height: "11rem",
-                backgroundColor: "var(--color-muted)",
-                borderRadius: "0.5rem",
+                backgroundColor: "#f4f4f5",
+                borderRadius: "0.75rem",
                 padding: "1.5rem",
                 display: "flex",
                 flexDirection: "column",
                 gap: "0.75rem",
               }}
             >
-              <span className="text-base font-semibold line-clamp-3">{s.title}</span>
-              <span className="text-sm text-muted-foreground line-clamp-2">{s.authors}</span>
+              <span style={{ fontWeight: 600, fontSize: "1rem", display: "-webkit-box", WebkitLineClamp: 3, WebkitBoxOrient: "vertical", overflow: "hidden" }}>
+                {s.title}
+              </span>
+              <span style={{ fontSize: "0.875rem", color: "#71717a", display: "-webkit-box", WebkitLineClamp: 2, WebkitBoxOrient: "vertical", overflow: "hidden" }}>
+                {s.authors}
+              </span>
             </div>
           ))}
         </div>
@@ -92,15 +93,15 @@ export default async function HomePage() {
         <div className="mt-8">
           <Link
             href="/data-explorer"
-            className="inline-flex items-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground hover:opacity-90 transition-opacity"
+            className="inline-flex items-center rounded-lg bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground hover:opacity-90 transition-opacity"
           >
             Begin exploring
           </Link>
         </div>
       </section>
 
-      {/* ── Analyze Data ─────────────────────────────────────── */}
-      <section className="py-16 border-t border-border text-center">
+      {/* ── Analyze Data ───────────────────────────────────────── */}
+      <section className="py-24 text-center">
         <h2 className="text-3xl font-bold tracking-tight">
           <span className="text-primary">Analyze </span>Data
         </h2>
@@ -109,9 +110,7 @@ export default async function HomePage() {
           strong the evidence is.
         </p>
 
-        {/* 3-column grid */}
-        <div className="mt-10 text-left"
-          style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "2rem" }}>
+        <div className="mt-10 text-left" style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "2.5rem" }}>
           <div>
             <h3 className="text-lg font-semibold mb-2">Summary statistics</h3>
             <p className="text-base leading-relaxed text-muted-foreground">
@@ -135,10 +134,10 @@ export default async function HomePage() {
           </div>
         </div>
 
-        <div className="mt-8">
+        <div className="mt-10">
           <Link
             href="/meta-analysis"
-            className="inline-flex items-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground hover:opacity-90 transition-opacity"
+            className="inline-flex items-center rounded-lg bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground hover:opacity-90 transition-opacity"
           >
             Run a meta-analysis
           </Link>

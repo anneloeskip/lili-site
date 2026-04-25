@@ -135,7 +135,7 @@ export default function Home() {
         </h2>
         <p className="mx-auto text-description">
           LILI is a sister database to LIME (Library of Interventions for Meat
-          Elimination) — the original open-source collection of intervention
+          Elimination), the original open-source collection of intervention
           studies on reducing animal product consumption, created by
           Dr. Willem Sleegers, Dr. Bastian Jaeger, and Dr. Robbie van Aert.
         </p>

@@ -1,149 +1,132 @@
-import Link from "next/link";
-import { loadStudies } from "@/lib/loadStudies";
+import Link from "next/link"
 
-export default async function HomePage() {
-  const studies = await loadStudies();
+import { Badge } from "@/components/ui/badge"
+import { Counter } from "@/components/landing-page/counter"
+import { Button } from "@/components/ui/button"
+import { PaperCarousel } from "@/components/landing-page/paper-carousel"
 
+import counts from "@/assets/data/counts.json"
+
+export default function Home() {
   return (
-    <div className="mx-auto max-w-4xl px-6">
-
-      {/* ── Hero ───────────────────────────────────────────────── */}
-      <section className="py-24 flex flex-col items-center text-center">
-        <span className="inline-flex items-center rounded-full bg-red-600 px-4 py-1.5 text-sm font-medium text-white">
-          Currently in beta
-        </span>
-
-        <h1 className="mt-8 text-5xl font-bold tracking-tight leading-tight">
-          Library of Interventions<br />on Loneliness &amp; Isolation
-        </h1>
-
-        <p className="mt-6 text-lg text-muted-foreground max-w-xl">
-          A library of intervention studies to reduce feelings of loneliness and social isolation.
-        </p>
-
-        <div className="mt-12 flex justify-center gap-16">
-          {[
-            { value: studies.length, label: "Papers" },
-            { value: "—", label: "Studies" },
-            { value: "—", label: "Effects" },
-            { value: "—", label: "Observations" },
-          ].map(({ value, label }) => (
-            <div key={label} className="text-center" style={{ minWidth: "7rem" }}>
-              <div className="text-3xl font-bold">{value}</div>
-              <div className="mt-1 text-sm text-muted-foreground">{label}</div>
-            </div>
-          ))}
+    <main className="page-container space-y-landing">
+      {/* Hero */}
+      <section className="mx-auto max-w-4xl space-y-10 text-center md:space-y-12">
+        <Badge variant="destructive">Currently in beta</Badge>
+        <div className="space-y-4">
+          <h1 className="text-page-title text-balance">
+            Library of Interventions on Loneliness &amp; Isolation
+          </h1>
+          <p className="mx-auto text-center text-description-lg">
+            A library of intervention studies to reduce feelings of loneliness
+            and social isolation.
+          </p>
+        </div>
+        <div className="mx-auto flex max-w-xs flex-wrap justify-center gap-6 text-center sm:max-w-lg sm:justify-between">
+          <div className="flex flex-col gap-y-2">
+            <span className="text-stat-number">
+              <Counter duration={1000} target={counts.papers} />
+            </span>
+            <span className="text-stat-label">Papers</span>
+          </div>
+          <div className="flex flex-col gap-y-2">
+            <span className="text-stat-number">
+              <Counter duration={1250} target={counts.studies} />
+            </span>
+            <span className="text-stat-label">Studies</span>
+          </div>
+          <div className="flex flex-col gap-y-2">
+            <span className="text-stat-number">
+              <Counter duration={1500} target={counts.effects} />
+            </span>
+            <span className="text-stat-label">Effects</span>
+          </div>
+          <div className="flex flex-col gap-y-2">
+            <span className="text-stat-number">
+              <Counter duration={1750} target={counts.observations} />
+            </span>
+            <span className="text-stat-label">Observations</span>
+          </div>
         </div>
       </section>
 
-      {/* ── About LILI ─────────────────────────────────────────── */}
-      <section className="mt-8 pb-24">
-        <h2 className="text-3xl font-bold tracking-tight mb-5">
-          <span className="text-primary">About </span>LILI
-        </h2>
-        <p className="text-base leading-relaxed text-muted-foreground mb-8 max-w-2xl">
-          LILI is a continuously growing collection of studies examining psychological
-          and social interventions to reduce loneliness and isolation. With LILI, you
-          can explore individual studies, understand the current state of research,
-          and evaluate which interventions have the strongest evidence behind them.
-        </p>
-        <Link
-          href="/about"
-          className="inline-flex items-center rounded-lg bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground hover:opacity-90 transition-opacity"
-        >
-          Learn more
-        </Link>
+      {/* About */}
+      <section className="mx-auto max-w-4xl space-y-6">
+        <div className="space-y-4">
+          <h2 className="text-section-title">
+            <span className="text-primary">About </span>
+            LILI
+          </h2>
+          <p className="text-description">
+            LILI is a continuously growing collection of studies examining
+            psychological and social interventions to reduce loneliness and
+            isolation. With LILI, you can explore individual studies, understand
+            the current state of research, and evaluate which interventions have
+            the strongest evidence behind them.
+          </p>
+        </div>
+        <Button asChild>
+          <Link href="/about">Learn more</Link>
+        </Button>
       </section>
 
-      {/* ── Explore Studies ────────────────────────────────────── */}
-      <section className="py-24 text-center">
-        <h2 className="text-3xl font-bold tracking-tight">
-          <span className="text-primary">Explore </span>Studies
-        </h2>
-        <p className="mt-4 text-base leading-relaxed text-muted-foreground mx-auto max-w-xl">
-          Browse our database of research papers testing interventions to
-          reduce feelings of loneliness and social isolation. Filter, sort, and
-          explore study details, methods, and outcomes.
-        </p>
-
-        <div className="mt-10 grid gap-4 text-left" style={{ gridTemplateColumns: "repeat(2, 1fr)" }}>
-          {studies.slice(0, 2).map((s) => (
-            <div
-              key={s.id}
-              style={{
-                height: "11rem",
-                backgroundColor: "#f4f4f5",
-                borderRadius: "0.75rem",
-                padding: "1.5rem",
-                display: "flex",
-                flexDirection: "column",
-                gap: "0.75rem",
-              }}
-            >
-              <span style={{ fontWeight: 600, fontSize: "1rem", display: "-webkit-box", WebkitLineClamp: 3, WebkitBoxOrient: "vertical", overflow: "hidden" }}>
-                {s.title}
-              </span>
-              <span style={{ fontSize: "0.875rem", color: "#71717a", display: "-webkit-box", WebkitLineClamp: 2, WebkitBoxOrient: "vertical", overflow: "hidden" }}>
-                {s.authors}
-              </span>
-            </div>
-          ))}
+      {/* Data explorer */}
+      <section className="text-center max-w-4xl mx-auto space-y-6">
+        <div className="space-y-4">
+          <h2 className="text-section-title">
+            <span className="text-primary">Explore</span> Studies
+          </h2>
+          <p className="mx-auto text-description">
+            Browse our database of research papers testing interventions to
+            reduce feelings of loneliness and social isolation. Filter, sort,
+            and explore study details, methods, and outcomes.
+          </p>
         </div>
-
-        <div className="mt-8">
-          <Link
-            href="/data-explorer"
-            className="inline-flex items-center rounded-lg bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground hover:opacity-90 transition-opacity"
-          >
-            Begin exploring
-          </Link>
+        <div className="breakout">
+          <PaperCarousel />
         </div>
+        <Button asChild>
+          <Link href="/data-explorer">Begin exploring</Link>
+        </Button>
       </section>
 
-      {/* ── Analyze Data ───────────────────────────────────────── */}
-      <section className="py-24 text-center">
-        <h2 className="text-3xl font-bold tracking-tight">
-          <span className="text-primary">Analyze </span>Data
+      {/* Meta-analysis */}
+      <section className="mx-auto max-w-4xl text-center space-y-6">
+        <h2 className="text-section-title">
+          <span className="text-primary">Analyze</span> Data
         </h2>
-        <p className="mt-4 text-base leading-relaxed text-muted-foreground mx-auto max-w-xl">
+        <p className="mx-auto text-description">
           Use our analysis tools to aggregate study results and find out how
           strong the evidence is.
         </p>
-
-        <div className="mt-10 text-left" style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "2.5rem" }}>
-          <div>
-            <h3 className="text-lg font-semibold mb-2">Summary statistics</h3>
-            <p className="text-base leading-relaxed text-muted-foreground">
+        <div className="mx-auto mt-8 grid max-w-4xl grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <div className="mx-auto max-w-80 space-y-2">
+            <h3 className="text-feature-title">Summary statistics</h3>
+            <p className="text-description">
               Get statistics on selected papers such as sample sizes and open
               science practices.
             </p>
           </div>
-          <div>
-            <h3 className="text-lg font-semibold mb-2">Meta-analysis</h3>
-            <p className="text-base leading-relaxed text-muted-foreground">
+          <div className="mx-auto max-w-80 space-y-2">
+            <h3 className="text-feature-title">Meta-analysis</h3>
+            <p className="text-description">
               Calculate meta-analytic effect sizes and see them translated into
-              alternatives to help you understand the effectiveness of interventions.
+              several alternatives to help you better understand the
+              effectiveness of interventions.
             </p>
           </div>
-          <div>
-            <h3 className="text-lg font-semibold mb-2">Data visualization</h3>
-            <p className="text-base leading-relaxed text-muted-foreground">
+          <div className="mx-auto max-w-80 space-y-2">
+            <h3 className="text-feature-title">Data visualization</h3>
+            <p className="text-description">
               Inspect data visualizations of effect sizes and other descriptives
-              about intervention studies in the database.
+              about intervention studies included in the database.
             </p>
           </div>
         </div>
-
-        <div className="mt-10">
-          <Link
-            href="/meta-analysis"
-            className="inline-flex items-center rounded-lg bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground hover:opacity-90 transition-opacity"
-          >
-            Run a meta-analysis
-          </Link>
-        </div>
+        <Button asChild>
+          <Link href="/meta-analysis">Run a meta-analysis</Link>
+        </Button>
       </section>
-
-    </div>
-  );
+    </main>
+  )
 }

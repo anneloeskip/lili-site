@@ -1,33 +1,33 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./globals.css";
-import { NavBar } from "@/components/NavBar";
+import { Inter } from "next/font/google"
 
-const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
-});
+import type { Metadata } from "next"
+
+import { NavBar } from "@/components/NavBar"
+import { cn } from "@/lib/utils"
+
+import "./globals.css"
+
+const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
   title: "LILI",
-  description:
-    "A library of intervention studies to reduce feelings of loneliness and social isolation.",
+  description: "A library of intervention studies to reduce feelings of loneliness and social isolation.",
   icons: {
     icon: "/LILI_logo.png",
   },
-};
+}
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: {
+  children: React.ReactNode
+}) {
   return (
-    <html lang="en" className={`${inter.variable} h-full antialiased`}>
-      <body className="min-h-full flex flex-col">
+    <html lang="en" suppressHydrationWarning>
+      <body className={cn(inter.className, "flex flex-col min-h-svh")}>
         <NavBar />
-        <main className="flex-1">{children}</main>
+        {children}
       </body>
     </html>
-  );
+  )
 }

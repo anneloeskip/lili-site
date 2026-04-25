@@ -1,10 +1,43 @@
-export default function ContactPage() {
+import { Mail, MailPlus, MailQuestion, MailWarning } from "lucide-react"
+import Link from "next/link"
+
+const Contact = () => {
   return (
-    <div className="page-container py-10">
-      <div className="page-width prose">
-        <h1>Contact</h1>
-        <p>Content coming soon.</p>
+    <main className="page-width page-container space-y-6">
+      <h1 className="text-page-title text-center">Contact</h1>
+      <p className="text-description">
+        The best way to contact us is via e-mail. Click on one of the options
+        below to let us know about a study we should add to our database, a
+        question you have, a bug you found, or something else.
+      </p>
+      <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4">
+        <Link href="mailto:contact.project.lili@gmail.com?subject=Study to add to the LILI project">
+          <div className="flex flex-col items-center justify-between rounded-lg border-2 border-primary bg-transparent p-4 hover:bg-accent hover:text-accent-foreground">
+            <MailPlus />
+            <span>Add study</span>
+          </div>
+        </Link>
+        <Link href="mailto:contact.project.lili@gmail.com?subject=Question about the LILI project">
+          <div className="flex flex-col items-center justify-between rounded-lg border-2 border-primary bg-transparent p-4 hover:bg-accent hover:text-accent-foreground">
+            <MailQuestion />
+            <span>Question</span>
+          </div>
+        </Link>
+        <Link href="mailto:contact.project.lili@gmail.com?subject=Bug report for the LILI project">
+          <div className="flex flex-col items-center justify-between rounded-lg border-2 border-primary bg-transparent p-4 hover:bg-accent hover:text-accent-foreground">
+            <MailWarning />
+            <span>Bug</span>
+          </div>
+        </Link>
+        <Link href="mailto:contact.project.lili@gmail.com">
+          <div className="flex flex-col items-center justify-between rounded-lg border-2 border-primary bg-transparent p-4 hover:bg-accent hover:text-accent-foreground">
+            <Mail />
+            <span>Other</span>
+          </div>
+        </Link>
       </div>
-    </div>
-  );
+    </main>
+  )
 }
+
+export default Contact

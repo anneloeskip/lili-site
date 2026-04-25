@@ -129,21 +129,21 @@ export default function Home() {
       </section>
 
       {/* Related projects */}
-      <section className="mx-auto max-w-4xl text-center space-y-2">
-        <h2 className="text-subsection-title">Related projects</h2>
-        <p className="text-description-lg">
-          LILI is inspired by{" "}
-          <Link
-            href="https://meat-lime.vercel.app"
-            target="_blank"
-            className="font-medium text-primary hover:underline"
-          >
-            LIME
-          </Link>
-          , a sister database of intervention studies on reducing animal product
-          consumption, created by Dr. Willem Sleegers, Dr. Bastian Jaeger, and
-          Dr. Robbie van Aert.
+      <section className="mx-auto max-w-4xl text-center space-y-6">
+        <h2 className="text-section-title">
+          <span className="text-primary">Related</span> Projects
+        </h2>
+        <p className="mx-auto text-description">
+          LILI is a sister database to LIME (Library of Interventions for Meat
+          Elimination) — the original open-source collection of intervention
+          studies on reducing animal product consumption, created by
+          Dr. Willem Sleegers, Dr. Bastian Jaeger, and Dr. Robbie van Aert.
         </p>
+        <Button asChild>
+          <Link href="https://meat-lime.vercel.app" target="_blank">
+            Visit LIME
+          </Link>
+        </Button>
       </section>
     </main>
   )

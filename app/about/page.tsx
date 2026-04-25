@@ -19,7 +19,7 @@ const About = () => {
         </AlertDescription>
       </Alert>
       <p className="text-description">
-        <strong>LILI</strong> stands for Library of Interventions on Loneliness
+        <strong>LILI</strong>{" "}stands for Library of Interventions on Loneliness
         &amp; Isolation. In short, LILI is a continuously growing collection of
         studies that tested the effectiveness of psychological and social
         interventions in reducing feelings of loneliness and social isolation.

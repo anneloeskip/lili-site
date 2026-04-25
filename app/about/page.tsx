@@ -71,6 +71,24 @@ const About = () => {
         <li>Estimate the average effect sizes across the included studies</li>
         <li>Test for publication bias</li>
       </ul>
+      <div className="space-y-2 pt-4 border-t border-border">
+        <h2 className="text-section-title">Acknowledgements</h2>
+        <p className="text-description">
+          LILI was directly inspired by{" "}
+          <Link
+            href="https://meat-lime.vercel.app"
+            target="_blank"
+            className="font-medium text-primary hover:underline"
+          >
+            LIME
+          </Link>{" "}
+          (Library of Interventions for Meat Elimination), an open-source
+          database of intervention studies created by Dr. Willem Sleegers,
+          Dr. Bastian Jaeger, and Dr. Robbie van Aert. LILI adopts the same
+          open-science approach and web framework as LIME, and we are grateful
+          to the LIME team for making their work publicly available.
+        </p>
+      </div>
     </main>
   )
 }

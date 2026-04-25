@@ -137,4 +137,28 @@
     max-width: 64rem;
     margin-inline: auto;
   }
+  .text-page-title {
+    @apply text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl;
+  }
+  .text-section-title {
+    @apply text-2xl font-bold tracking-tight sm:text-3xl;
+  }
+  .text-subsection-title {
+    @apply text-xl font-bold tracking-tight sm:text-2xl;
+  }
+  .text-feature-title {
+    @apply text-lg font-semibold tracking-tight sm:text-xl;
+  }
+  .text-description {
+    @apply text-base leading-relaxed;
+  }
+  .text-description-lg {
+    @apply text-base leading-relaxed sm:text-lg text-muted-foreground;
+  }
+  .text-stat-label {
+    @apply text-sm text-muted-foreground sm:text-base;
+  }
+  .text-stat-number {
+    @apply text-2xl font-bold sm:text-3xl;
+  }
 }

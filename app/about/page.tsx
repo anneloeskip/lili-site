@@ -71,8 +71,8 @@ const About = () => {
         <li>Estimate the average effect sizes across the included studies</li>
         <li>Test for publication bias</li>
       </ul>
-      <div className="space-y-2">
-        <h2 className="text-section-title">Acknowledgements</h2>
+      <div className="space-y-3 pt-6">
+        <h2 className="text-subsection-title">Acknowledgements</h2>
         <p className="text-description">
           LILI was directly inspired by{" "}
           <Link

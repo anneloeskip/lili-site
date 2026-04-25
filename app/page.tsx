@@ -127,6 +127,24 @@ export default function Home() {
           <Link href="/meta-analysis">Run a meta-analysis</Link>
         </Button>
       </section>
+
+      {/* Related projects */}
+      <section className="mx-auto max-w-4xl text-center space-y-2">
+        <h2 className="text-subsection-title">Related projects</h2>
+        <p className="text-description-lg">
+          LILI is inspired by{" "}
+          <Link
+            href="https://meat-lime.vercel.app"
+            target="_blank"
+            className="font-medium text-primary hover:underline"
+          >
+            LIME
+          </Link>
+          , a sister database of intervention studies on reducing animal product
+          consumption, created by Dr. Willem Sleegers, Dr. Bastian Jaeger, and
+          Dr. Robbie van Aert.
+        </p>
+      </section>
     </main>
   )
 }

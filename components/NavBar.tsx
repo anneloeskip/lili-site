@@ -23,11 +23,11 @@ export function NavBar() {
           <Image
             src="/LILI_logo.png"
             alt="LILI"
-            width={72}
-            height={72}
+            width={36}
+            height={36}
             priority
           />
-          <span className="text-xl font-semibold tracking-tight">LILI</span>
+          <span className="text-2xl font-semibold tracking-tight">LILI</span>
         </Link>
 
         <ul className="flex items-center gap-6">

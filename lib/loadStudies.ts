@@ -1,17 +1,7 @@
-// starter-code/lib_loadStudies.ts
-// -> copy this file to your Next.js project at:  lib/loadStudies.ts
-//
-// WHAT THIS FILE DOES
-// This reads your studies.csv file from disk and turns each row into
-// a JavaScript object. It runs on the server (not in the browser),
-// so it has access to the file system.
-
 import fs from "node:fs/promises";
 import path from "node:path";
 import Papa from "papaparse";
 
-// The shape of a single study row. This MUST match the columns in
-// your CSV (see data/CODEBOOK.md for definitions of each field).
 export type Study = {
   id: string;
   authors: string;
@@ -47,9 +37,7 @@ export type Study = {
 };
 
 export async function loadStudies(): Promise<Study[]> {
-  // process.cwd() is the project root (where package.json lives).
-  // We keep studies.csv in a top-level `data/` folder.
-  const csvPath = path.join(process.cwd(), "data", "studies.csv");
+  const csvPath = path.join(process.cwd(), "assets", "data", "studies.csv");
   const csvText = await fs.readFile(csvPath, "utf8");
 
   const parsed = Papa.parse<Study>(csvText, {

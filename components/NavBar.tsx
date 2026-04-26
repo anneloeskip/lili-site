@@ -3,6 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
+import { ThemeToggle } from "@/components/theme-toggle";
 
 const links = [
   { href: "/about", label: "About" },
@@ -47,6 +48,9 @@ export function NavBar() {
             </li>
           ))}
         </ul>
+        <div className="ml-auto">
+          <ThemeToggle />
+        </div>
       </nav>
     </header>
   );

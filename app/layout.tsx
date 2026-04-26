@@ -3,6 +3,7 @@ import { Inter } from "next/font/google"
 import type { Metadata } from "next"
 
 import { NavBar } from "@/components/NavBar"
+import { ThemeProvider } from "@/components/theme-provider"
 import { cn } from "@/lib/utils"
 
 import "./globals.css"
@@ -22,8 +23,10 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={cn(inter.className, "flex flex-col min-h-svh")}>
-        <NavBar />
-        {children}
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <NavBar />
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   )

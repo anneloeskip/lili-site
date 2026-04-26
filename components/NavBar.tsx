@@ -20,12 +20,11 @@ export function NavBar() {
     <header>
       <nav className="mx-auto flex max-w-6xl items-center gap-6 px-4 py-3">
         <Link href="/" className="flex items-center gap-2 shrink-0">
-          <Image
-            src="/LILI_logo.png"
+          <img
+            src="/LILI_logo.svg"
             alt="LILI"
             width={44}
             height={44}
-            priority
           />
           <span className="text-2xl font-semibold tracking-tight">LILI</span>
         </Link>

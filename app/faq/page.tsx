@@ -12,13 +12,53 @@ const faqSections = [
     items: [
       {
         question: "What is LILI?",
-        answer:
-          "LILI stands for Library of Interventions on Loneliness & Isolation. It is a continuously growing collection of studies that tested the effectiveness of psychological and social interventions in reducing feelings of loneliness and social isolation. LILI is directly inspired by LIME (Library of Interventions for Meat Elimination).",
+        answer: (
+          <>
+            LILI stands for Library of Interventions on Loneliness &amp;
+            Isolation. It is a continuously growing collection of studies that
+            tested the effectiveness of psychological and social interventions in
+            reducing feelings of loneliness and social isolation. You can explore
+            the studies with the{" "}
+            <Link
+              href="/data-explorer"
+              className="font-medium text-primary hover:underline"
+            >
+              Data Explorer tool
+            </Link>{" "}
+            or conduct custom analyses with the{" "}
+            <Link
+              href="/meta-analysis"
+              className="font-medium text-primary hover:underline"
+            >
+              Meta-analysis tool
+            </Link>
+            . You can find out more about this project on the{" "}
+            <Link
+              href="/about"
+              className="font-medium text-primary hover:underline"
+            >
+              About
+            </Link>{" "}
+            page.
+          </>
+        ),
       },
       {
         question: "Who created LILI?",
-        answer:
-          "LILI was created by Dr. Anneloes Kip (Postdoctoral Researcher at Tilburg University) and Dr. Dongning Ren (Associate Professor at Maastricht University). See the Contributors page for more details.",
+        answer: (
+          <>
+            LILI was created by Dr. Anneloes Kip (Postdoctoral Researcher at
+            Tilburg University) and Dr. Dongning Ren (Associate Professor at
+            Maastricht University). See the{" "}
+            <Link
+              href="/contributors"
+              className="font-medium text-primary hover:underline"
+            >
+              Contributors
+            </Link>{" "}
+            page for more details.
+          </>
+        ),
       },
       {
         question: "Is LILI free to use?",
@@ -58,8 +98,20 @@ const faqSections = [
       },
       {
         question: "How often is the database updated?",
-        answer:
-          "We aim to update the database regularly as new studies are published. Because LILI is currently in beta, the database is still growing. If you find a study that is missing, please let us know.",
+        answer: (
+          <>
+            We aim to update the database regularly as new studies are
+            published. Because LILI is currently in beta, the database is still
+            growing. If you find a study that is missing, please{" "}
+            <Link
+              href="/contact"
+              className="font-medium text-primary hover:underline"
+            >
+              let us know
+            </Link>
+            .
+          </>
+        ),
       },
       {
         question: "Can I download the data?",
@@ -83,13 +135,38 @@ const faqSections = [
     items: [
       {
         question: "What can I do with the Data Explorer?",
-        answer:
-          "The Data Explorer allows you to browse, filter, and sort the studies in the LILI database. You can inspect study details, filter by intervention type, outcome measure, study design, and more, and download the filtered dataset.",
+        answer: (
+          <>
+            The{" "}
+            <Link
+              href="/data-explorer"
+              className="font-medium text-primary hover:underline"
+            >
+              Data Explorer
+            </Link>{" "}
+            allows you to browse, filter, and sort the studies in the LILI
+            database. You can inspect study details, filter by intervention
+            type, outcome measure, study design, and more, and download the
+            filtered dataset.
+          </>
+        ),
       },
       {
         question: "How do I filter studies?",
-        answer:
-          "Use the filter options at the top of the Data Explorer to narrow down studies by characteristics such as intervention type, delivery format, outcome measure, or study design. Multiple filters can be applied at the same time.",
+        answer: (
+          <>
+            Use the filter options at the top of the{" "}
+            <Link
+              href="/data-explorer"
+              className="font-medium text-primary hover:underline"
+            >
+              Data Explorer
+            </Link>{" "}
+            to narrow down studies by characteristics such as intervention type,
+            delivery format, outcome measure, or study design. Multiple filters
+            can be applied at the same time.
+          </>
+        ),
       },
     ],
   },
@@ -98,13 +175,37 @@ const faqSections = [
     items: [
       {
         question: "What can I do with the Meta-analysis tool?",
-        answer:
-          "The Meta-analysis tool allows you to synthesize evidence across studies. You can specify which studies to include using filters, estimate average effect sizes, and test for publication bias.",
+        answer: (
+          <>
+            The{" "}
+            <Link
+              href="/meta-analysis"
+              className="font-medium text-primary hover:underline"
+            >
+              Meta-analysis tool
+            </Link>{" "}
+            allows you to synthesize evidence across studies. You can specify
+            which studies to include using filters, estimate average effect
+            sizes, and test for publication bias.
+          </>
+        ),
       },
       {
         question: "What effect size metric does LILI use?",
-        answer:
-          "LILI primarily uses standardized mean differences (Cohen's d / Hedges' g) to express effect sizes. The Meta-analysis tool translates these into several alternative metrics to help you interpret the results.",
+        answer: (
+          <>
+            LILI primarily uses standardized mean differences (Cohen&apos;s d /
+            Hedges&apos; g) to express effect sizes. The{" "}
+            <Link
+              href="/meta-analysis"
+              className="font-medium text-primary hover:underline"
+            >
+              Meta-analysis tool
+            </Link>{" "}
+            translates these into several alternative metrics to help you
+            interpret the results.
+          </>
+        ),
       },
       {
         question: "What method is used for the meta-analysis?",
@@ -113,8 +214,20 @@ const faqSections = [
       },
       {
         question: "How is publication bias assessed?",
-        answer:
-          "The Meta-analysis tool provides tools to assess publication bias, including funnel plots and statistical tests. These help you evaluate whether the results might be inflated due to selective reporting of positive findings.",
+        answer: (
+          <>
+            The{" "}
+            <Link
+              href="/meta-analysis"
+              className="font-medium text-primary hover:underline"
+            >
+              Meta-analysis tool
+            </Link>{" "}
+            provides tools to assess publication bias, including funnel plots
+            and statistical tests. These help you evaluate whether the results
+            might be inflated due to selective reporting of positive findings.
+          </>
+        ),
       },
     ],
   },
@@ -127,14 +240,14 @@ const FAQ = () => {
       <div className="space-y-10">
         {faqSections.map((section) => (
           <div key={section.title} className="space-y-4">
-            <h2 className="text-subsection-title">{section.title}</h2>
-            <Accordion type="multiple" className="space-y-2">
+            <h2 className="text-section-title">{section.title}</h2>
+            <Accordion type="multiple">
               {section.items.map((item, index) => (
                 <AccordionItem
                   key={index}
                   value={`${section.title}-${index}`}
                 >
-                  <AccordionTrigger className="text-left font-medium">
+                  <AccordionTrigger className="text-left">
                     {item.question}
                   </AccordionTrigger>
                   <AccordionContent className="text-description">

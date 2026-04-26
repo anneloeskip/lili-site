@@ -1,0 +1,18 @@
+PAGE: Contributors
+URL: /contributors
+================================================================================
+
+CONTRIBUTORS
+
+  Dr. Anneloes Kip
+  Postdoctoral Researcher at Tilburg University
+
+  Dr. Dongning Ren
+  Associate Professor at Maastricht University
+
+--------------------------------------------------------------------------------
+
+CONSULTANTS
+
+  Dr. Manuel Oliveira
+  Postdoctoral Researcher at Eindhoven University of Technology

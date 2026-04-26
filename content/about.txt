@@ -1,0 +1,46 @@
+PAGE: About
+URL: /about
+================================================================================
+
+[Beta notice]
+LILI is currently in beta and you are viewing a prototype of the website. We
+are still in the process of building the database and website. Any feedback is
+welcome and can be given via the Contact page.
+
+--------------------------------------------------------------------------------
+
+LILI stands for Library of Interventions on Loneliness & Isolation. In short,
+LILI is a continuously growing collection of studies that tested the
+effectiveness of psychological and social interventions in reducing feelings of
+loneliness and social isolation. This website aims to make this literature more
+accessible to researchers, clinicians, advocates, and policy makers.
+
+At the core of LILI is a machine-readable, continuously growing database of
+intervention studies. For each study, we extracted information on the
+intervention type (e.g., cognitive behavioral therapy, social skills training),
+the delivery format (e.g., online, in-person, group-based), the outcome measure
+(e.g., UCLA Loneliness Scale), the participant sample (e.g., sample size,
+country, population), and much more.
+
+This database can be accessed with the Data Explorer tool. You can explore the
+data with a customizable table that allows you to:
+  - Include or exclude specific studies based on different criteria (e.g., only
+    randomized controlled trials or studies with a specific intervention type)
+  - Download the data
+
+The Meta-analysis tool allows you to synthesize the evidence across many
+studies. It allows you to:
+  - Specify which types of studies should be included in the analysis with the
+    help of various filters
+  - Estimate the average effect sizes across the included studies
+  - Test for publication bias
+
+--------------------------------------------------------------------------------
+
+ACKNOWLEDGEMENTS
+
+LILI was directly inspired by LIME (Library of Interventions for Meat
+Elimination), an open-source database of intervention studies created by
+Dr. Willem Sleegers, Dr. Bastian Jaeger, and Dr. Robbie van Aert. LILI adopts
+the same open-science approach and web framework as LIME, and we are grateful
+to the LIME team for making their work publicly available.

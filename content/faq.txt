@@ -1,0 +1,228 @@
+PAGE: FAQ
+URL: /faq
+================================================================================
+
+GENERAL
+-------
+
+Q: What is LILI?
+A: In short, it is a library of psychological and social intervention studies
+   aimed at reducing feelings of loneliness and social isolation. We are
+   collecting information on all studies on this topic to make it available via
+   this website. You can explore the studies with the Data Explorer tool or
+   conduct custom analyses with the Meta-analysis tool. You can find out more
+   about this project on the About page.
+
+Q: Who is the target audience?
+A: LILI is primarily designed for researchers, clinicians, advocates, and policy
+   makers who are interested in the loneliness and social isolation literature.
+   In many ways, the website is designed to make scientific results more
+   accessible for non-scientists. It facilitates the exploration and analysis of
+   scientific studies, especially for people who do not regularly search for and
+   read scientific publications. However, some background knowledge in statistics
+   and scientific research is recommended, especially when using the
+   meta-analysis tool.
+
+Q: Who created LILI?
+A: LILI was created by Dr. Anneloes Kip and Dr. Dongning Ren. You can find out
+   more about who collaborated on LILI on the Contributors page.
+
+Q: Who has funded LILI?
+A: LILI is currently maintained by its contributors on a voluntary basis and is
+   not funded by an external grant or institution. If you are interested in
+   supporting LILI, please contact us.
+
+================================================================================
+
+THE DATABASE
+------------
+
+Q: What types of interventions are included?
+A: We include studies that tested whether an intervention reduces feelings of
+   loneliness and/or social isolation. These interventions differ on various
+   aspects:
+     - Type: cognitive behavioral therapy, social skills training, mindfulness,
+       befriending, technology-based interventions, etc.
+     - Delivery format: individual, group-based, online, in-person, etc.
+     - Target group: older adults, adolescents, clinical populations, general
+       population, etc.
+
+Q: What types of outcomes are included?
+A: We include studies that measured various outcomes related to loneliness and
+   social isolation. We distinguish between several types of measures:
+     - Loneliness: self-reported feelings of loneliness (e.g., UCLA Loneliness
+       Scale, De Jong Gierveld Scale)
+     - Social isolation: objective measures of social contact and network size
+     - Related outcomes: social anxiety, social connectedness, quality of life,
+       etc.
+   These outcomes were measured at different time points, from immediately after
+   the intervention to months later.
+
+Q: What types of studies are included?
+A: The database includes data from different types of publications, including
+   peer-reviewed articles published in scientific journals, unpublished
+   scientific papers and theses, and reports by other institutions. We include
+   studies that experimentally tested the effect of an intervention on a
+   relevant outcome. This includes between-subject designs, which compare the
+   scores of participants who received the intervention to scores of a control
+   group, and within-subject designs, which compare participants' scores before
+   and after an intervention.
+
+Q: How were the studies coded?
+A: Every study was coded on various relevant dimensions related to:
+     - The paper: title, authors, publication year, etc.
+     - The study: sample size, study design, accessibility of data,
+       preregistration, etc.
+     - The intervention: type, delivery format, target group, duration, etc.
+     - The outcomes: type, measure used, time since intervention, etc.
+   A description of each variable that was recorded can be found in the
+   codebook, which you can download on the Meta-analysis page.
+
+Q: Are all relevant studies included in the database?
+A: LILI is currently in beta. We are still in the process of developing a fully
+   functioning version of the website and continuously adding studies to the
+   database. On the landing page, you can see how many papers, studies, and
+   effect sizes are currently included.
+
+Q: Can I suggest a paper for the database?
+A: Eventually, we want to include all studies that fulfill our inclusion
+   criteria. If you know a study that has not been included yet, you can let us
+   know via the Contact page.
+
+================================================================================
+
+DATA EXPLORER
+-------------
+
+Q: What is the Data Explorer?
+A: The Data Explorer helps you browse through research papers included in the
+   database. We have organized information about a paper into different levels,
+   as papers can be quite complex. They have paper-level information like the
+   authors and publication year, but they can also consist of multiple studies,
+   each possibly with multiple interventions and outcomes. We've organized all
+   this information into separate tabs so you can focus on the specific details
+   you need.
+
+   We've also added several features to help you explore and work with the data:
+     - You can decide which studies to include by using filters (e.g., only
+       randomized controlled trials, only studies with a specific intervention
+       type)
+     - You can sort the data based on information from a specific column (e.g.,
+       sorting by publication year or effect size)
+     - You can click on a link at the end of each row to see more information in
+       a pop-up window, which also includes a link to the paper.
+
+Q: What are the different data levels and how do they relate?
+A: The Data Explorer has multiple tabs, each showing different information about
+   the same research. Each tab represents a different 'level' of information:
+     - Papers: Basic publication info like titles, authors, and publication
+       year. You can also see which papers are open access and follow links to
+       the original source.
+     - Studies: Individual studies within papers. Shows sample sizes, study
+       design details, whether the study was preregistered, and more.
+     - Interventions: The specific techniques researchers tested, such as
+       cognitive behavioral therapy, social skills training, or mindfulness.
+       Includes details about the delivery format and target group.
+     - Outcomes: How researchers measured the effects of the interventions,
+       such as self-reported loneliness, social isolation, or related outcomes.
+     - Effects: The statistical results showing how well the intervention worked
+       (effect size) and each effect's sample size.
+
+Q: How do I use filters?
+A: Each tab has its own set of filters to help you narrow down what you're
+   looking at. For example, you might filter papers by publication year, or
+   studies by sample size or study design. Multiple filters can be applied at
+   the same time, and the lock feature lets you maintain your filter selection
+   as you switch between tabs.
+
+Q: Can I download the data?
+A: Yes. You can download any of the tables as CSV files to analyze in Excel, R,
+   or other tools. This is useful if you want to run your own statistical
+   analyses, perhaps on a more fine-grained subset of the data.
+
+================================================================================
+
+META-ANALYSIS
+-------------
+
+Q: What is a meta-analysis?
+A: Generally speaking, the goal of a meta-analysis is to combine the results of
+   many studies on a specific question in a quantitative way. For example, we
+   may want to know if a specific type of intervention reduces loneliness.
+   Researchers run experiments to test the effect of such interventions, but the
+   effect size may depend on the specific population studied, the intervention
+   content, how soon after the intervention loneliness was measured, and many
+   other factors. By averaging the results from all these studies, we get a
+   better understanding of how effective the intervention is in general.
+
+Q: How does the Meta-analysis tool work?
+A: The Meta-analysis tool allows you to conduct customizable meta-analyses on
+   specific sets of studies. First, you can select which studies should be
+   included. You can filter by type of intervention, outcome measure, country,
+   and many other variables. The website then displays various results for the
+   selected set of studies:
+     - The meta-analytic effect size (Cohen's d) across all studies, including
+       the 95% confidence interval, the 95% prediction interval, and other
+       effect size measures
+     - The results of a test for publication bias (including a funnel plot
+       showing the relation between effect size and standard error)
+     - A dot plot and forest plot that visualize the effect sizes of all
+       included studies
+
+Q: How narrow or wide should my inclusion criteria be?
+A: Meta-analyses provide the average effect across many studies. This average is
+   more meaningful if we compare studies that are more similar to each other.
+   Setting relatively narrow criteria helps reduce variation between studies,
+   making it easier to compare results and draw more meaningful conclusions.
+   However, when widening the inclusion criteria, more studies are included,
+   which increases the statistical power and precision of the meta-analysis. By
+   adjusting your inclusion criteria, you can navigate this tradeoff. Ultimately,
+   your inclusion criteria depend on which question you want to address.
+
+Q: How should I interpret the effect size estimates?
+A: Effect size measures such as Cohen's d can be used to quantify differences
+   between groups on some variable of interest. For example, if an intervention
+   leads to a larger reduction in loneliness relative to a control group, this
+   will be reflected in a larger effect size.
+
+Q: If I implement the same intervention as one of the studies, will it have the
+   same effect?
+A: There are many reasons why you should not be too confident that an
+   intervention will be equally effective, or even effective at all, in a
+   different context. The effectiveness of an intervention is not only influenced
+   by the type of intervention that was tested, but also by many other factors.
+   The participants in the original study may have been more open to change (e.g.,
+   university students or a highly motivated clinical sample). The original study
+   may have only assessed loneliness immediately after the intervention, which may
+   not reflect long-term effectiveness.
+
+   Even when we replicate a study design under very similar conditions, results
+   often look different. Larger, statistically significant results are more likely
+   to be accepted for publication and some researchers engage in questionable
+   research practices that distort their results. This means that effect sizes in
+   the literature may overstate how large the true effect sizes really are.
+
+   To address these difficulties, you can use LILI to find studies that more
+   closely match the sample and setting you have in mind, or to assess the
+   meta-analytic estimate of an intervention type, which may be more robust than
+   the result from a single study.
+
+Q: Are some study results more informative and how can I tell?
+A: It is difficult to judge how reliable and generalizable the results of a
+   specific study are. But, all else being equal, there are a few indicators you
+   could pay attention to:
+     - Sample size: Studies with larger participant samples will provide more
+       reliable estimates of group differences. Smaller studies will yield
+       noisier effect sizes. Meta-analyses are meant to address this problem by
+       averaging over many studies.
+     - Outcome measure: If you are interested in reducing loneliness
+       specifically, you could focus on studies that measured loneliness with a
+       validated scale (e.g., the UCLA Loneliness Scale). Some studies only
+       assessed related outcomes such as social anxiety or quality of life, which
+       may not capture the same construct.
+     - Follow-up timing: Studies that measured outcomes only immediately after
+       the intervention may overestimate long-term effectiveness. Studies with
+       longer follow-up periods provide more relevant evidence for sustained
+       effects.
+   You can find these indicators using the Data Explorer and use them as
+   inclusion criteria for a meta-analysis.

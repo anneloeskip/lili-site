@@ -1,0 +1,16 @@
+PAGE: Contact
+URL: /contact
+================================================================================
+
+The best way to contact us is via e-mail. Click on one of the options below to
+let us know about a study we should add to our database, a question you have, a
+bug you found, or something else.
+
+[Buttons]
+  - Add study  → contact.project.lili@gmail.com (subject: Study to add to the LILI project)
+  - Question   → contact.project.lili@gmail.com (subject: Question about the LILI project)
+  - Bug        → contact.project.lili@gmail.com (subject: Bug report for the LILI project)
+  - Other      → contact.project.lili@gmail.com
+
+NOTE: The email address above is a placeholder and needs to be updated to the
+real contact address before the site goes live.

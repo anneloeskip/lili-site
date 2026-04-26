@@ -46,7 +46,7 @@ const Contributors = () => {
           <div className="max-w-60 space-y-2">
             <div className="mb-5 w-full aspect-square overflow-hidden rounded-lg">
               <Image
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover object-top"
                 src={manuel}
                 alt="Dr. Manuel Oliveira"
               />

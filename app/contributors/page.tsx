@@ -39,6 +39,10 @@ const Contributors = () => {
           </span>
         </div>
       </div>
+      <div className="space-y-4 pt-4">
+        <h2 className="text-subsection-title">Consultants</h2>
+        <p className="text-description-lg">Coming soon.</p>
+      </div>
     </main>
   )
 }

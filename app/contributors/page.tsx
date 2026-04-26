@@ -10,13 +10,15 @@ const Contributors = () => {
   return (
     <main className="page-width page-container text-center space-y-6">
       <h1 className="text-page-title">Contributors</h1>
-      <div className="grid justify-center gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="flex flex-wrap justify-center gap-6">
         <div className="max-w-60 space-y-2">
-          <Image
-            className="mb-5 rounded-lg"
-            src={anneloes}
-            alt="Dr. Anneloes Kip"
-          />
+          <div className="mb-5 w-full aspect-square overflow-hidden rounded-lg">
+            <Image
+              className="w-full h-full object-cover"
+              src={anneloes}
+              alt="Dr. Anneloes Kip"
+            />
+          </div>
           <span className="block font-semibold">Dr. Anneloes Kip</span>
           <span className="block">
             Postdoctoral Researcher at Tilburg University
@@ -24,11 +26,13 @@ const Contributors = () => {
         </div>
 
         <div className="max-w-60 space-y-2">
-          <Image
-            className="mb-5 rounded-lg"
-            src={dongning}
-            alt="Dr. Dongning Ren"
-          />
+          <div className="mb-5 w-full aspect-square overflow-hidden rounded-lg">
+            <Image
+              className="w-full h-full object-cover"
+              src={dongning}
+              alt="Dr. Dongning Ren"
+            />
+          </div>
           <span className="block font-semibold">Dr. Dongning Ren</span>
           <span className="block">
             Associate Professor at Maastricht University

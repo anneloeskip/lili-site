@@ -12,9 +12,6 @@ const inter = Inter({ subsets: ["latin"] })
 export const metadata: Metadata = {
   title: "LILI",
   description: "A library of intervention studies to reduce feelings of loneliness and social isolation.",
-  icons: {
-    icon: "/LILI_logo.png",
-  },
 }
 
 export default function RootLayout({

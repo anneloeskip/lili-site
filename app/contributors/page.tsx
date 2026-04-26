@@ -1,10 +1,42 @@
-export default function ContributorsPage() {
+import Image from "next/image"
+import Link from "next/link"
+import { Badge } from "@/components/ui/badge"
+import { LinkIcon } from "lucide-react"
+
+import anneloes from "@/assets/images/anneloes.jpg"
+import dongning from "@/assets/images/dongning.jpg"
+
+const Contributors = () => {
   return (
-    <div className="page-container py-10">
-      <div className="page-width prose">
-        <h1>Contributors</h1>
-        <p>Content coming soon.</p>
+    <main className="page-width page-container text-center space-y-6">
+      <h1 className="text-page-title">Contributors</h1>
+      <div className="grid justify-center gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="max-w-60 space-y-2">
+          <Image
+            className="mb-5 rounded-lg"
+            src={anneloes}
+            alt="Dr. Anneloes Kip"
+          />
+          <span className="block font-semibold">Dr. Anneloes Kip</span>
+          <span className="block">
+            Postdoctoral Researcher at Tilburg University
+          </span>
+        </div>
+
+        <div className="max-w-60 space-y-2">
+          <Image
+            className="mb-5 rounded-lg"
+            src={dongning}
+            alt="Dr. Dongning Ren"
+          />
+          <span className="block font-semibold">Dr. Dongning Ren</span>
+          <span className="block">
+            Associate Professor at Maastricht University
+          </span>
+        </div>
       </div>
-    </div>
-  );
+    </main>
+  )
 }
+
+export default Contributors

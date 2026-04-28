@@ -1,0 +1,42 @@
+[
+  {
+    "effect": 1,
+    "study": 1,
+    "outcome": 1,
+    "paper": 1,
+    "paper_label": "Masi et al. (2011)",
+    "effect_size_type": "Cohen's d",
+    "effect_size": 0.20,
+    "effect_size_var": null,
+    "ci_lower": 0.03,
+    "ci_upper": 0.36,
+    "p_value": "<0.05",
+    "effect_intervention_n": null,
+    "effect_control_n": null,
+    "follow_up_weeks": null,
+    "direction": "beneficial",
+    "key_finding": "Interventions targeting maladaptive social cognition produced the largest effect sizes (d = 0.60 for RCTs) compared to social skills training, enhanced social support, or increased social interaction.",
+    "risk_of_bias": "not assessed",
+    "effect_notes": "Effect size sign flipped to LILI convention (positive = beneficial). Original paper: d = -0.20 (random effects)."
+  },
+  {
+    "effect": 2,
+    "study": 2,
+    "outcome": 2,
+    "paper": 2,
+    "paper_label": "Käll et al. (2020)",
+    "effect_size_type": "Cohen's d",
+    "effect_size": 0.77,
+    "effect_size_var": 0.059,
+    "ci_lower": 0.29,
+    "ci_upper": 1.25,
+    "p_value": "<0.01",
+    "effect_intervention_n": 37,
+    "effect_control_n": 36,
+    "follow_up_weeks": 16,
+    "direction": "beneficial",
+    "key_finding": "Guided internet-delivered CBT produced a large reduction in loneliness vs. waitlist (d = 0.77); gains maintained at 4-month follow-up.",
+    "risk_of_bias": "some concerns",
+    "effect_notes": "Pilot RCT; small sample; participants unblinded."
+  }
+]

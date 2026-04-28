@@ -8,6 +8,20 @@ When in doubt, write `NA` (not available) for a field rather than leaving it bla
 
 **id** — A short unique string you invent, usually `firstauthorYEAR` in lowercase, e.g., `masi2011`, `kall2020`. If two papers collide, add a letter: `smith2019a`, `smith2019b`. Keep it URL-safe (letters, numbers, no spaces).
 
+**paper_status** — Where this paper is in the workflow. Pick one:
+- `ready to code` — paper meets inclusion criteria and is waiting to be coded
+- `coding in progress` — someone is currently coding it
+- `included` — fully coded and included in the database
+- `excluded` — checked and does not meet inclusion criteria (explain why in `notes`)
+- `contact authors` — meets criteria but key statistics are missing; authors need to be emailed
+- `calculate effect size` — coded but effect size still needs to be calculated
+
+**paper_type** — Type of publication. Pick one: `peer reviewed paper`, `preprint`, `thesis`, `report`, `conference paper`.
+
+**paper_open_access** — Whether the full text is freely available. Pick one: `open access`, `paywalled`, `inaccessible`.
+
+**paper_coded_by** — Name or initials of who coded this paper. If coded by more than one person, separate with a semicolon.
+
 **authors** — Author list. Format: `Last, F. M.; Last, F. M.; ...` (semicolon-separated, because commas inside a CSV cell are a pain). For more than six authors, write the first six then `et al.`.
 
 **year** — Year of publication (four digits).
@@ -18,6 +32,8 @@ When in doubt, write `NA` (not available) for a field rather than leaving it bla
 
 **doi** — Digital Object Identifier, *without* the `https://doi.org/` prefix. Just the bare identifier (e.g., `10.1016/j.beth.2019.05.001`).
 
+**open_access_url** — A working link where readers can access the paper. Prefer a DOI link or an open-access repository link.
+
 ## Study context
 
 **country** — Country where the study was conducted. Use `mixed` for multi-country studies. For meta-analyses, note "authors: X; studies reviewed: mixed" if relevant.
@@ -25,6 +41,10 @@ When in doubt, write `NA` (not available) for a field rather than leaving it bla
 **population** — Who participated, in plain English. Examples: "older adults in nursing homes", "university students", "adults with chronic illness", "adolescents (secondary school)", "community-dwelling adults reporting loneliness".
 
 **age_mean** — Mean age of the sample. `NA` if not reported or not applicable (e.g., meta-analysis).
+
+**age_sd** — Standard deviation of age. `NA` if not reported.
+
+**gender_f_pct** — Percentage of female participants (0–100). `NA` if not reported.
 
 **sample_size_total** — Total number of participants. For meta-analyses, the summed N across included studies.
 
@@ -41,6 +61,14 @@ When in doubt, write `NA` (not available) for a field rather than leaving it bla
 - `observational` — cross-sectional or cohort, no intervention
 - `meta-analysis` — quantitative synthesis
 - `systematic review` — narrative synthesis, no pooled effect
+
+**study_randomization** — Was assignment to conditions randomized? `yes` or `no`. `NA` for meta-analyses and systematic reviews.
+
+**study_preregistered** — Was the study preregistered before data collection began? `yes` or `no`. `NA` if unclear or not applicable.
+
+**study_preregistration_link** — URL to the preregistration (e.g., OSF, ClinicalTrials.gov). `NA` if not preregistered.
+
+**study_data_available** — Are the raw data publicly available? `yes` or `no`.
 
 **intervention_category** — Masi et al. (2011) proposed four categories that are still widely used. Pick the best fit, or `mixed` if the intervention targets more than one:
 - `social skills` — training in skills like conversation, assertiveness
@@ -85,9 +113,7 @@ When in doubt, write `NA` (not available) for a field rather than leaving it bla
 
 **risk_of_bias** — Your assessment: `low`, `some concerns`, `high`, or `not assessed`. If you use the Cochrane ROB2 tool (recommended for RCTs), this maps directly.
 
-**open_access_url** — A working link where readers can access (at least) the abstract. Prefer a DOI link or an open-access repository link.
-
-**notes** — Anything else worth capturing: signing conventions, unusual design choices, whether it was preregistered, connections to other papers, your own commentary.
+**notes** — Anything else worth capturing: unusual design choices, connections to other papers, your own commentary, anything that was ambiguous during coding.
 
 ## A quick workflow for coding a new paper
 

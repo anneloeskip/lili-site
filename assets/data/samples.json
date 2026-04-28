@@ -1,0 +1,38 @@
+[
+  {
+    "sample": 1,
+    "study": 1,
+    "paper": 1,
+    "paper_label": "Masi et al. (2011)",
+    "sample_country": "mixed",
+    "sample_population": "Mixed across populations",
+    "sample_type": "mixed",
+    "sample_age_mean": null,
+    "sample_age_sd": null,
+    "sample_gender_f_pct": null,
+    "sample_n_total": 8673,
+    "sample_n_treatment": null,
+    "sample_n_control": null,
+    "sample_representative": "no",
+    "sample_description": "Aggregated sample across 50 included studies; mixed populations including older adults, children, and general community samples.",
+    "sample_notes": "N is summed across all 50 included studies."
+  },
+  {
+    "sample": 2,
+    "study": 2,
+    "paper": 2,
+    "paper_label": "Käll et al. (2020)",
+    "sample_country": "Sweden",
+    "sample_population": "Adults self-reporting loneliness (community sample)",
+    "sample_type": "general population",
+    "sample_age_mean": 47.5,
+    "sample_age_sd": null,
+    "sample_gender_f_pct": null,
+    "sample_n_total": 73,
+    "sample_n_treatment": 37,
+    "sample_n_control": 36,
+    "sample_representative": "no",
+    "sample_description": "Community-dwelling adults recruited via advertisements; self-reported loneliness above threshold.",
+    "sample_notes": ""
+  }
+]

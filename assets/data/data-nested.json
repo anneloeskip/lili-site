@@ -1,0 +1,48 @@
+[
+  {
+    "paper": 1,
+    "paper_label": "Masi et al. (2011)",
+    "paper_title": "A Meta-Analysis of Interventions to Reduce Loneliness",
+    "paper_authors": "Masi, C. M.; Chen, H. Y.; Hawkley, L. C.; Cacioppo, J. T.",
+    "paper_link": "https://doi.org/10.1177/1088868310377394",
+    "studies": [
+      {
+        "study": 1,
+        "study_n": 8673,
+        "interventions": [
+          {
+            "intervention_description": "Systematic review and meta-analysis of 50 studies testing loneliness interventions classified into four categories: social skills training, enhanced social support, increased social interaction, and addressing maladaptive social cognition."
+          }
+        ],
+        "outcomes": [
+          {
+            "outcome_description": "Varied; mostly UCLA Loneliness Scale across the 50 included studies."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "paper": 2,
+    "paper_label": "Käll et al. (2020)",
+    "paper_title": "Internet-Based Cognitive Behavior Therapy for Loneliness: A Pilot Randomized Controlled Trial",
+    "paper_authors": "Käll, A.; Jägholm, S.; Hesser, H.; Andersson, F.; Mathaldi, A.; Norkvist, B. T.; Shafran, R.; Andersson, G.",
+    "paper_link": "https://doi.org/10.1016/j.beth.2019.05.001",
+    "studies": [
+      {
+        "study": 2,
+        "study_n": 73,
+        "interventions": [
+          {
+            "intervention_description": "8-week therapist-guided internet-delivered CBT program targeting loneliness via psychoeducation, behavioral experiments, and cognitive restructuring of maladaptive interpersonal cognitions."
+          }
+        ],
+        "outcomes": [
+          {
+            "outcome_description": "UCLA Loneliness Scale Version 3 (UCLA-3); 20-item self-report scale measuring subjective loneliness."
+          }
+        ]
+      }
+    ]
+  }
+]

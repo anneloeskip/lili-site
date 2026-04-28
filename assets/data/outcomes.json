@@ -1,0 +1,22 @@
+[
+  {
+    "outcome": 1,
+    "study": 1,
+    "paper": 1,
+    "paper_label": "Masi et al. (2011)",
+    "outcome_measure": "UCLA Loneliness Scale",
+    "outcome_label": "Loneliness (varied)",
+    "outcome_description": "Varied; mostly UCLA Loneliness Scale across the 50 included studies.",
+    "outcome_notes": ""
+  },
+  {
+    "outcome": 2,
+    "study": 2,
+    "paper": 2,
+    "paper_label": "Käll et al. (2020)",
+    "outcome_measure": "UCLA Loneliness Scale",
+    "outcome_label": "Loneliness (UCLA-3)",
+    "outcome_description": "UCLA Loneliness Scale Version 3; 20-item self-report scale.",
+    "outcome_notes": ""
+  }
+]

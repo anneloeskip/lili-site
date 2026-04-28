@@ -1,0 +1,108 @@
+"use client"
+
+import Link from "next/link"
+import { LinkIcon, SquareArrowOutUpRight } from "lucide-react"
+import { Row } from "@tanstack/react-table"
+
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog"
+
+import data from "@/assets/data/data-nested.json"
+import { Effect, Intervention, Outcome, Paper, Sample, Study } from "@/lib/types"
+
+type PaperDialogProps = {
+  row: Row<Paper | Study | Sample | Intervention | Outcome | Effect>
+  variant?: "label" | "button"
+}
+
+export const PaperDialog = ({ row, variant = "label" }: PaperDialogProps) => {
+  const paperData = data.find((datum) => datum.paper === row.original.paper)
+
+  if (!paperData) return null
+
+  return (
+    <Dialog>
+      <DialogTrigger asChild className="cursor-pointer">
+        {variant === "button" ? (
+          <div className="flex justify-center">
+            <SquareArrowOutUpRight className="h-4 w-4 hover:text-muted-foreground" />
+          </div>
+        ) : (
+          <span className="whitespace-nowrap underline-offset-2 hover:underline">
+            {paperData.paper_label}
+          </span>
+        )}
+      </DialogTrigger>
+
+      <DialogContent
+        className="sm:max-w-xl md:max-w-2xl lg:max-w-3xl xl:max-w-4xl overflow-auto p-4"
+        style={{ maxHeight: "95dvh" }}
+      >
+        <DialogHeader>
+          <DialogTitle>{paperData.paper_label}</DialogTitle>
+          <DialogDescription>
+            Paper information including intervention and outcome details.
+          </DialogDescription>
+        </DialogHeader>
+        <div className="space-y-4">
+          <div className="space-y-2">
+            <div className="border-b flex items-center gap-2">
+              <div className="text-lg font-semibold">Paper</div>
+              {paperData.paper_link && (
+                <Link href={paperData.paper_link} target="_blank">
+                  <LinkIcon width={14} height={14} />
+                </Link>
+              )}
+            </div>
+            <div>
+              <div className="text-base font-semibold">Title</div>
+              <div className="text-sm text-muted-foreground">{paperData.paper_title}</div>
+            </div>
+            <div>
+              <div className="text-base font-semibold">Authors</div>
+              <div className="text-sm text-muted-foreground">{paperData.paper_authors}</div>
+            </div>
+          </div>
+
+          {paperData.studies.map((studyData) => (
+            <div key={studyData.study} className="space-y-2">
+              <div className="border-b">
+                <div className="text-lg font-semibold">Study {studyData.study}</div>
+              </div>
+              <div>
+                <div className="text-base font-semibold">Sample size</div>
+                <div className="text-sm text-muted-foreground">{studyData.study_n}</div>
+              </div>
+              <div>
+                <div className="text-base font-semibold">Interventions</div>
+                <ul className="ms-6 list-outside list-disc">
+                  {studyData.interventions.map((interventionData, i) => (
+                    <li key={i} className="text-sm text-muted-foreground">
+                      {interventionData.intervention_description}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div>
+                <div className="text-base font-semibold">Outcomes</div>
+                <ul className="ms-6 list-outside list-disc">
+                  {studyData.outcomes.map((outcomeData, i) => (
+                    <li key={i} className="text-sm text-muted-foreground">
+                      {outcomeData.outcome_description}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          ))}
+        </div>
+      </DialogContent>
+    </Dialog>
+  )
+}

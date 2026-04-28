@@ -1,0 +1,28 @@
+[
+  {
+    "study": 1,
+    "paper": 1,
+    "paper_label": "Masi et al. (2011)",
+    "study_n": 8673,
+    "study_design": "meta-analysis",
+    "study_condition_assignment": "individual",
+    "study_randomization": "no",
+    "study_preregistered": "no",
+    "study_preregistration_link": null,
+    "study_data_available": "no",
+    "study_notes": "Includes 50 studies: 20 RCTs, 18 non-RCTs, 12 pre-post designs."
+  },
+  {
+    "study": 2,
+    "paper": 2,
+    "paper_label": "Käll et al. (2020)",
+    "study_n": 73,
+    "study_design": "RCT",
+    "study_condition_assignment": "individual",
+    "study_randomization": "yes",
+    "study_preregistered": "no",
+    "study_preregistration_link": null,
+    "study_data_available": "no",
+    "study_notes": ""
+  }
+]

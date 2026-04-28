@@ -1,10 +1,30 @@
 [
   {
+    "paper": 1,
+    "paper_label": "Masi et al. (2011)",
+    "paper_status": "included",
+    "paper_type": "peer reviewed paper",
+    "paper_open_access": "open access",
+    "paper_coded_by": "NA",
+    "paper_authors": "Masi, C. M.; Chen, H. Y.; Hawkley, L. C.; Cacioppo, J. T.",
+    "paper_year": 2011,
     "paper_title": "A Meta-Analysis of Interventions to Reduce Loneliness",
-    "paper_authors": "Masi, C. M.; Chen, H. Y.; Hawkley, L. C.; Cacioppo, J. T."
+    "paper_source": "Personality and Social Psychology Review",
+    "paper_link": "https://doi.org/10.1177/1088868310377394",
+    "paper_notes": "Foundational meta-analysis; introduced the influential 4-category taxonomy of loneliness interventions still widely used today."
   },
   {
+    "paper": 2,
+    "paper_label": "Käll et al. (2020)",
+    "paper_status": "included",
+    "paper_type": "peer reviewed paper",
+    "paper_open_access": "open access",
+    "paper_coded_by": "NA",
+    "paper_authors": "Käll, A.; Jägholm, S.; Hesser, H.; Andersson, F.; Mathaldi, A.; Norkvist, B. T.; Shafran, R.; Andersson, G.",
+    "paper_year": 2020,
     "paper_title": "Internet-Based Cognitive Behavior Therapy for Loneliness: A Pilot Randomized Controlled Trial",
-    "paper_authors": "Käll, A.; Jägholm, S.; Hesser, H.; Andersson, F.; Mathaldi, A.; Norkvist, B. T.; Shafran, R.; Andersson, G."
+    "paper_source": "Behavior Therapy",
+    "paper_link": "https://doi.org/10.1016/j.beth.2019.05.001",
+    "paper_notes": "Pilot RCT; informed larger subsequent trials of iCBT for loneliness."
   }
 ]

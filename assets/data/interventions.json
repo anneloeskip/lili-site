@@ -1,0 +1,28 @@
+[
+  {
+    "intervention": 1,
+    "study": 1,
+    "paper": 1,
+    "paper_label": "Masi et al. (2011)",
+    "intervention_category": "mixed",
+    "intervention_name": "Meta-analysis of 4 intervention types",
+    "intervention_description": "Systematic review and meta-analysis of 50 studies testing loneliness interventions classified into four categories: social skills training, enhanced social support, increased social interaction, and addressing maladaptive social cognition.",
+    "control_condition": "varied",
+    "delivery_format": "varied",
+    "duration_weeks": null,
+    "intervention_notes": "4-category taxonomy: social skills, social support, social interaction, maladaptive cognition."
+  },
+  {
+    "intervention": 2,
+    "study": 2,
+    "paper": 2,
+    "paper_label": "Käll et al. (2020)",
+    "intervention_category": "maladaptive cognition",
+    "intervention_name": "iCBT for loneliness",
+    "intervention_description": "8-week therapist-guided internet-delivered CBT program targeting loneliness via psychoeducation, behavioral experiments, and cognitive restructuring of maladaptive interpersonal cognitions.",
+    "control_condition": "Waitlist",
+    "delivery_format": "online (guided)",
+    "duration_weeks": 8,
+    "intervention_notes": ""
+  }
+]

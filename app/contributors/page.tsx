@@ -6,6 +6,7 @@ import { LinkIcon } from "lucide-react"
 import anneloes from "@/assets/images/anneloes.jpg"
 import dongning from "@/assets/images/dongning.jpg"
 import manuel from "@/assets/images/manuel.jpg"
+import willem from "@/assets/images/willem.png"
 
 const Contributors = () => {
   return (
@@ -43,6 +44,22 @@ const Contributors = () => {
       <div className="space-y-4 pt-4">
         <h2 className="text-subsection-title">Consultants</h2>
         <div className="flex flex-wrap justify-center gap-6">
+          <div className="max-w-60 space-y-2">
+            <div className="mb-5 w-full aspect-square overflow-hidden rounded-lg">
+              <Image
+                className="w-full h-full object-cover object-top"
+                src={willem}
+                alt="Dr. Willem Sleegers"
+              />
+            </div>
+            <span className="block font-semibold">Dr. Willem Sleegers</span>
+            <span className="block">
+              Methodologist at Statistics Netherlands
+            </span>
+            <span className="block">
+              Affiliated Researcher at Tilburg University
+            </span>
+          </div>
           <div className="max-w-60 space-y-2">
             <div className="mb-5 w-full aspect-square overflow-hidden rounded-lg">
               <Image
